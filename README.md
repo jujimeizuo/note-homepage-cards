@@ -1,34 +1,41 @@
-# Pokémon Cards Holographic effect in CSS
+# note-homepage-cards
 
-This is a repository holder for the Pokemon Cards CSS Holographic effect.  
+Source code of the pokemon-like cards on my [notebook](https://note.tonycrane.cc/)'s homepage, modified from [simeydotme/pokemon-cards-css](https://github.com/simeydotme/pokemon-cards-css/).
 
-🔥 As seen on [css-tricks.com](https://css-tricks.com/holographic-trading-card-effect/) and [codepen](https://codepen.io/simeydotme/pen/abYWJdX)  
-🌟 Demo running @ https://poke-holo.simey.me/
+## Usage
 
-### A collection of advanced CSS styles, applied with SvelteJS.
-Uses CSS Transforms, Gradients, Blend-modes and Filters to simulate the various Holofoil effects found
-in the Sword and Shield era of Pokemon Trading Cards.
+- Install dependencies
+    ```shell
+    $ npm install
+    ```
+- Run locally for development
+    ```shell
+    $ npm run dev # open at https://localhost:5173/
+    ```
+- Build to static files
+    ```shell
+    $ npm run build
+    ```
+- Copy to note's mkdocs project
+    - Copy static files
+        ```text
+        dist/assets/index.???.css
+        dist/assets/index.???.js
+        public/*
+        ```
+    - Insert html to homepage
+        ```html
+        <link rel="stylesheet" href="css/cards/base.css" />
+        <link rel="stylesheet" href="css/cards/cards.css" />
+        <script type="module" crossorigin src="/assets/cards/index.???.js"></script>
+        <link rel="stylesheet" href="/assets/cards/index.???.css">
+        <div id="app"></div>
+        ```
 
-<img src="public/pokemon-cards-demo.gif" />
+## Acknowledgement
 
+- [simeydotme/pokemon-cards-css](https://github.com/simeydotme/pokemon-cards-css/)
 
----
+## LICENSE
 
-#### support / tip  
-If you think this is super cool, or useful, and want to donate a little, then you are also super cool!
-
-|  |  |         |
-|--|--:|---------|
-| <img src="https://user-images.githubusercontent.com/2817396/149629283-6002944f-9253-4e35-917d-89b476deae4e.png" width=20> | [![£1 One Pound tip](https://user-images.githubusercontent.com/2817396/149629980-08b9a952-bd6a-4c23-be78-05e3fd534352.png)](https://www.paypal.com/paypalme/simey/1) | [£1 tip](https://www.paypal.com/paypalme/simey/1) |
-| <img src="https://user-images.githubusercontent.com/2817396/149629283-6002944f-9253-4e35-917d-89b476deae4e.png" width=20> | [![£5 Five Pounds tip](https://user-images.githubusercontent.com/2817396/149629994-3a99770c-d333-46e7-9818-ab6b18ad0202.png)](https://www.paypal.com/paypalme/simey/5) | [£5 tip](https://www.paypal.com/paypalme/simey/5) |
-| <img src="https://user-images.githubusercontent.com/2817396/149629283-6002944f-9253-4e35-917d-89b476deae4e.png" width=20> | [![£10 Ten Pounds tip](https://user-images.githubusercontent.com/2817396/149630000-95aa4234-ff67-4e7c-a7f4-ffd52f25e6d8.png)](https://www.paypal.com/paypalme/simey/10) | [£10 tip](https://www.paypal.com/paypalme/simey/10) |
-
-
-
-
-
----
-#### attribution
-
-<sub>- Galaxy Holo from [aschefield101](https://www.deviantart.com/aschefield101/art/HoloSheet-2012-313543843)</sub>  
-<sub>- Some backgrounds from [Vecteezy](https://www.vecteezy.com/free-photos)</sub>
+Licensed under [GPL-3.0](https://github.com/TonyCrane/note-homepage-cards/blob/main/LICENSE), same as the upstream's [license](https://github.com/TonyCrane/note-homepage-cards/blob/main/LICENSE.pokemon-cards-css).
