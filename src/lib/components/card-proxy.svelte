@@ -12,6 +12,7 @@
   export let supertype = undefined;
   export let rarity = undefined;
   export let isReverse = false;
+  export let pageURL = undefined;
 
   // image props
   export let img = undefined;
@@ -183,7 +184,8 @@
     subtypes,
     supertype,
     rarity,
-    showcase
+    showcase,
+    pageURL
 
   }
 

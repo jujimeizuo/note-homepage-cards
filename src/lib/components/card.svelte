@@ -13,10 +13,11 @@
   export let subtypes = "basic";
   export let supertype = "pokémon";
   export let rarity = "common";
+  export let pageURL = "";
 
   // image props
   export let img = "";
-  export let back = "https://tcg.pokemon.com/assets/img/global/tcg-card-back-2x.jpg";
+  export let back = "/assets/cards/back.png";
   export let foil = "";
   export let mask = "";
 
@@ -37,7 +38,7 @@
 
   let back_img = back;
   let front_img = "";
-  let img_base = img.startsWith("http") ? "" : "https://images.pokemontcg.io/";
+  let img_base = "";
 
 
   let thisCard;
@@ -140,14 +141,20 @@
     }, delay);
   };
 
-  const activate = (e) => {
-    if ($activeCard && $activeCard === thisCard) {
-      $activeCard = undefined;
-    } else {
-      $activeCard = thisCard;
-      resetBaseOrientation();
+  // const activate = (e) => {
+  //   if ($activeCard && $activeCard === thisCard) {
+  //     $activeCard = undefined;
+  //   } else {
+  //     $activeCard = thisCard;
+  //     resetBaseOrientation();
+  //   }
+  // };
+
+  const jumpToPage = (e) => {
+    if (pageURL != "") {
+      window.location.href = pageURL;
     }
-  };
+  }
 
   const deactivate = (e) => {
     interactEnd();
@@ -377,8 +384,7 @@
 <svelte:window on:scroll={reposition} />
 
 <div
-  class="card {types} / interactive / "
-  class:active
+  class="cards {types} / interactive / "
   class:interacting
   class:loading
   class:masked={!!mask}
@@ -395,26 +401,33 @@
     class="card__translater">
     <button
       class="card__rotator"
-      on:click={activate}
+      on:click={jumpToPage}
       on:pointermove={interact}
       on:mouseout={interactEnd}
       on:blur={deactivate}
-      aria-label="Expand the Pokemon Card; {name}."
       tabindex="0"
       >
-      <img
+      <!-- <img
         class="card__back"
         src={back_img}
         alt="The back of a Pokemon Card, a Pokeball in the center with Pokemon logo above and below"
         loading="lazy"
         width="660"
         height="921"
-      />
+      /> -->
       <div class="card__front" 
         style={ staticStyles + foilStyles }>
         <img
-          src={front_img}
-          alt="Front design of the {name} Pokemon Card, with the stats and info around the edge"
+          src={front_img + "#only-dark"}
+          alt="card (dark)"
+          on:load={imageLoader}
+          loading="lazy"
+          width="660"
+          height="921"
+        />
+        <img
+          src={front_img.replace(".png", ".light.png#only-light")}
+          alt="card (light)"
           on:load={imageLoader}
           loading="lazy"
           width="660"
