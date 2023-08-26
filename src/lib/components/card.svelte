@@ -6,7 +6,6 @@
   import { clamp, round, adjust } from "../helpers/Math.js";
 
   // data / pokemon props
-  export let name = "";
   export let number = "";
   export let set = "";
   export let types = "";
