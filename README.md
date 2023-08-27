@@ -1,6 +1,6 @@
 # note-homepage-cards
 
-Source code of the pokemon-like cards on my [notebook](https://note.tonycrane.cc/)'s homepage, modified from [simeydotme/pokemon-cards-css](https://github.com/simeydotme/pokemon-cards-css/).
+Source code of the pokemon-like cards on my [notebook](https://note.jujimeizuo.cn/)'s homepage, modified from [simeydotme/pokemon-cards-css](https://github.com/simeydotme/pokemon-cards-css/).
 
 ## Usage
 
@@ -8,6 +8,11 @@ Source code of the pokemon-like cards on my [notebook](https://note.tonycrane.cc
     ```shell
     $ npm install
     ```
+- modify png information
+    ```shell
+    modify /src/App.svelte
+    ```
+
 - Run locally for development
     ```shell
     $ npm run dev # open at https://localhost:5173/
@@ -38,4 +43,4 @@ Source code of the pokemon-like cards on my [notebook](https://note.tonycrane.cc
 
 ## LICENSE
 
-Licensed under [GPL-3.0](https://github.com/TonyCrane/note-homepage-cards/blob/main/LICENSE), same as the upstream's [license](https://github.com/TonyCrane/note-homepage-cards/blob/main/LICENSE.pokemon-cards-css).
+Licensed under [GPL-3.0](https://github.com/jujimeizuo/note-homepage-cards/blob/main/LICENSE), same as the upstream's [license](https://github.com/jujimeizuo/note-homepage-cards/blob/main/LICENSE.pokemon-cards-css).
