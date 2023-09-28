@@ -2,11 +2,7 @@
 	// import Card from "./lib/components/card.svelte";
 	import Card from "./lib/components/card-proxy.svelte";
 	const cardInfos = [
-		["#", "/assets/cards/160_hires.png"],
-		["#", "/assets/cards/1_hires.png"],
-		["#", "/assets/cards/7_hires.png"],
-		["#", "/assets/cards/33_hires.png"],
-		// ["#", "/assets/cards/back.png"],
+		["#", "/assets/cards/back.png"],
 		// ["/cs/pl/riscv/", "/assets/cards/riscv.png"],
 		// ["/cs/pl/rust/basic/", "/assets/cards/rust.png"],
 		// ["/cs/pl/haskell/", "/assets/cards/haskell.png"],
